@@ -138,4 +138,14 @@ Run the `setup-kerberoast-targets.ps1` after the DC has rebooted.
 ```Powershell
 .\setup-kerberoast-targets.ps1
 ```
+## Setting Up Attack Box
 
+### Installing attacker tools
+Upload the `install-tools.sh` to the attack box, modify permissions and then run the script to install the needed tools.
+```bash
+chmod +x install-tools.sh
+```
+Run the install script 
+```bash
+./install-tools.sh
+```
