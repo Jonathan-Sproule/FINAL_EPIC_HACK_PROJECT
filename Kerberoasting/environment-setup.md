@@ -44,3 +44,29 @@ cd terraform
 Create `main.tf` and `variables.tf` in the terraform directory using the files from this repository.
 
 ### Modify Terraform main.tf passwords
+
+## Terraform Configuration Files
+
+### main.tf
+
+Defines the Azure infrastructure for the lab environment:
+
+- **Resource Group**: Container for all lab resources
+- **Virtual Network**: 10.0.0.0/16 network with 10.0.1.0/24 subnet
+- **Domain Controller VM**: Windows Server 2022 (Standard_B2s) with static IP 10.0.1.10
+- **Attacker VM**: Kali Linux (Standard_B2s) with dynamic IP
+- **Public IPs**: Assigned to both VMs for external access
+- **Network Security Groups**: Allow RDP to DC, SSH to attacker, and internal network traffic
+- **Outputs**: Displays public IPs and connection information after deployment
+
+### variables.tf
+
+Optional configuration file that defines customizable parameters:
+
+- Azure region (default: East US)
+- Resource group name
+- Admin credentials
+- VM sizes
+- Network settings
+
+Variables allow you to modify the deployment without editing main.tf directly.
