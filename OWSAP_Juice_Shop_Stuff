@@ -30,4 +30,21 @@ Here I (your fearless leader) will walk you through the attack steps. For this p
 What the heck is Cross Site Scripting?
 Well it is a web security vulnerability that allows attackers to compromise interactible content on a web site such as file uploads, text boxes, etc.
 
+Step 1: Boot up your Docker contaiter and head to http://localhost:3000
+![alt text](https://github.com/SophieP21/FINAL_EPIC_HACK_PROJECTmain/Images_OWSAP/Screenshot%202025-12-06%20201445.png)
+
+Step 2: Head to the Login In page in the top right corner and then make a new account by clicking the new user buttin at the bottom.
+![alt text](https://github.com/SophieP21/FINAL_EPIC_HACK_PROJECTmain/Images_OWSAP/Screenshot%202025-12-06%20201729.png)
+
+Step 3: Add something to your cart and then go to your cart and check out. Go through all the screens and enter random information until you reach this screen:
+!{alt text]()
+
+Step 4: After the order confirmed screen go to the the top right corner and click on Account -> Orders and Payment -> Order History. You should come to this screen:
+!{alt text]()
+
+Step 5: Click on the little image of the truck in the order information (when you hover over it it should show "Track Order") and it should bring you to this screen:
+!{alt text]()
+
+Step 6: In the url bar replace the current url with this: http://localhost:3000/#/track-result?id=IcanputanythingIwanthere Then reload the page, it should display IcanputanythingIwanthere in the search results as seen here: 
+!{alt text]()
 
