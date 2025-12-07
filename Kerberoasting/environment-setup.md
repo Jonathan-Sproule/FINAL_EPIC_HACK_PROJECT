@@ -120,7 +120,7 @@ terraform output
 ```
 ## Configuring Active Directory
 
-Connect to the DC and upload the `setup-lab-dc.ps1` and `setup-kerberoast-targets.ps1` scripts.
+Connect to the DC and upload the `setup-lab-dc.ps1` and `setup-kerberoast-targets.ps1` scripts from the PowerShell dir in the repo.
 
 Open Powershell as administrator
 
