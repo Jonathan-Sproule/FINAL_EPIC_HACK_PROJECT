@@ -70,3 +70,36 @@ Optional configuration file that defines customizable parameters:
 - Network settings
 
 Variables allow you to modify the deployment without editing main.tf directly.
+
+## Running Terraform from host to build the Azure infrastruction
+
+### Terraform Commands
+With the configuration files in your directory, set up the working directory with 
+```bash
+terraform init
+```
+
+Ensuring the terraform plan is correct, check the output of 'plan' to verify the infrastructure build
+```bash
+terraform plan
+```
+### Accept Marketplace Terms
+Before building you may need to accept the Azure Kali image terms.
+Accept the terms for Kali Linux:
+```bash
+az vm image terms accept --publisher kali-linux --offer kali --plan kali-2024-3
+```
+## Continue with terraform
+To build the Azure infrastructure
+```bash
+terraform apply
+```
+
+Terraform will output the build plan and confirm the build actions
+```bash
+yes
+```
+Terraform will output the Ip addresses of the 
+
+
+
