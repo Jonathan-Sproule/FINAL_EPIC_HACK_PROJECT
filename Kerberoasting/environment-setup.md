@@ -114,7 +114,7 @@ Attacker Machine:
 EOT
 dc_public_ip = "XX.XXX.XXX.XXX"
 ```
-Make note of this information though to see this output again use the output command from the working directory
+Make note of this information. To see this output again use the output command from the working directory `/pentesting-lab/terraform/`
 ```bash
 terraform output
 ```
@@ -122,20 +122,27 @@ terraform output
 
 Connect to the DC and upload the `setup-lab-dc.ps1` and `setup-kerberoast-targets.ps1` scripts from the PowerShell dir in the repo.
 
-Open Powershell as administrator
+Setting up and connecting through bastion to utilize the GUI can make this process easier.
 
-Run the `setup-lab-dc.ps1` script to configure the DC.
-```Powershell
+Open PowerShell as Administrator.
+
+If you get an execution policy error, run:
+```powershell
+Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope CurrentUser
+```
+
+Run the `setup-lab-dc.ps1` script to configure the DC:
+```powershell
 .\setup-lab-dc.ps1
 ```
 
-Reboot
-```Powershell
+Reboot:
+```powershell
 Restart-Computer
 ```
 
-Run the `setup-kerberoast-targets.ps1` after the DC has rebooted.
-```Powershell
+Run the `setup-kerberoast-targets.ps1` after the DC has rebooted:
+```powershell
 .\setup-kerberoast-targets.ps1
 ```
 ## Setting Up Attack Box
@@ -149,3 +156,8 @@ Run the install script
 ```bash
 ./install-tools.sh
 ```
+Exit SSH and reconnect to your Attack Box then verify the tools are working
+```bach
+GetUserSPNs.py -h
+``` 
+
